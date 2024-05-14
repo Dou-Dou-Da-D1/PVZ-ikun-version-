@@ -1,14 +1,14 @@
-#include "conezombie.h"
+#include "dancerzombie.h"
 
-ConeZombie::ConeZombie()
+DancerZombie::DancerZombie()
 {
-    hp = 640;
+    hp = 1670;
     atk = 100 * 33 / 1000;
-    speed = 80.0 * 33 / 1000 / 4.7;
-    setMovie(":/images/ConeZombieWalk.gif");
+    speed = 80.0 * 33 / 1000 / 2.5;
+    setMovie(":/images/DancerZombieWalk.gif");
 }
 
-void ConeZombie::advance(int phase)
+void DancerZombie::advance(int phase)
 {
     if (!phase)
         return;
@@ -18,8 +18,9 @@ void ConeZombie::advance(int phase)
         if (state < 2)
         {
             state = 2;
-            setMovie(":/images/ConeZombieDie.gif");
+            setMovie(":/images/DancerZombieDie.gif");
             setHead(":/images/ZombieHead.gif");
+
         }
         else if (movie->currentFrameNumber() == movie->frameCount() - 1)
             delete this;
@@ -33,14 +34,14 @@ void ConeZombie::advance(int phase)
         if (state != 1)
         {
             state = 1;
-            setMovie(":/images/ConeZombieAttack.gif");
+            setMovie(":/images/DancerZombieAttack.gif");
         }
         return;
     }
     if (state)
     {
         state = 0;
-        setMovie(":/images/ConeZombieWalk.gif");
+        setMovie(":/images/DancerZombieWalk.gif");
     }
     setX(x() - speed);
 }

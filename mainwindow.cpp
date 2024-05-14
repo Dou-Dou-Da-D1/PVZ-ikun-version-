@@ -78,11 +78,11 @@ void MainWindow::addZombie()
         else if (type < 70)
             zombie = new ConeZombie;
         else if (type < 80)
-            zombie = new BucketZombie;
+            zombie = new JacksonZombie;
         else if (type < 90)
             zombie = new ScreenZombie;
         else
-            zombie = new FootballZombie;
+            zombie = new DancerZombie;
         zombie->setPos(1028, 130 + 98 * i);
         scene->addItem(zombie);
     }

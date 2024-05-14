@@ -11,12 +11,12 @@ CONFIG += c++17
 
 SOURCES += \
     basiczombie.cpp \
-    bucketzombie.cpp \
     button.cpp \
     card.cpp \
     cherrybomb.cpp \
     conezombie.cpp \
-    footballzombie.cpp \
+    dancerzombie.cpp \
+    jacksonzombie.cpp \
     main.cpp \
     mainwindow.cpp \
     map.cpp \
@@ -38,12 +38,12 @@ SOURCES += \
 
 HEADERS += \
     basiczombie.h \
-    bucketzombie.h \
     button.h \
     card.h \
     cherrybomb.h \
     conezombie.h \
-    footballzombie.h \
+    dancerzombie.h \
+    jacksonzombie.h \
     mainwindow.h \
     map.h \
     mower.h \
@@ -74,3 +74,6 @@ CONFIG += embed_translations
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    images.qrc

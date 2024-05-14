@@ -14,9 +14,9 @@
 #include "mower.h"
 #include "basiczombie.h"
 #include "conezombie.h"
-#include "bucketzombie.h"
+#include "jacksonzombie.h"
 #include "screenzombie.h"
-#include "footballzombie.h"
+#include "dancerzombie.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
